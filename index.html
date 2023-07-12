@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Website</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap">
+  <style>
+    /* ... CSS code ... */
+  </style>
+</head>
+<body>
+  <div id="navbar">
+    <div class="icon">&#9776;</div>
+    <a href="#" onclick="changeContent('home')"><span>Home</span></a>
+    <a href="#" onclick="changeContent('about')"><span>About</span></a>
+    <a href="#" onclick="changeContent('services')"><span>Services</span></a>
+    <a href="#" onclick="changeContent('contact')"><span>Contact</span></a>
+    <div class="extra-link">Extra</div>
+  </div>
+
+  <div id="content">
+    <!-- Content will be loaded dynamically here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
