@@ -2,8 +2,14 @@
 <html>
 <head>
   <title>My Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <style>
     /* ... CSS code ... */
   </style>
@@ -13,15 +19,14 @@
     <div class="icon">&#9776;</div>
     <a href="#" onclick="changeContent('home')"><span>Home</span></a>
     <a href="#" onclick="changeContent('about')"><span>About</span></a>
-    <a href="#" onclick="changeContent('services')"><span>Services</span></a>
-    <a href="#" onclick="changeContent('contact')"><span>Contact</span></a>
+    <a href="#" onclick="changeContent('projects')"><span>Projects</span></a>
+    <a href="#" onclick="changeContent('contact')"><span>Send Message</span></a>
     <div class="extra-link">Extra</div>
   </div>
 
   <div id="content">
     <!-- Content will be loaded dynamically here -->
   </div>
-
-  <script src="script.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>

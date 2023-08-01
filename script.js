@@ -66,13 +66,9 @@ function changeContent(page) {
   }, 300); // Adjust the delay duration (in milliseconds) to match the transition duration
 }
 
-
-
-
 // Set home page as default
 changeContent('home');
 highlightNavItem('home');
-
 
 
 

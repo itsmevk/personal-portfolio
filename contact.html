@@ -4,24 +4,57 @@
   <title>About Us - My Website</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap">
+  <!-- Add Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
   <div id="navbar">
     <div class="icon">&#9776;</div>
     <a href="#" onclick="changeContent('home')"><span>Home</span></a>
     <a href="#" onclick="changeContent('about')"><span>About</span></a>
-    <a href="#" onclick="changeContent('services')"><span>Services</span></a>
-    <a href="#" onclick="changeContent('contact')"><span>Contact</span></a>
+    <a href="#" onclick="changeContent('projects')"><span>Projects</span></a>
+    <a href="#" onclick="changeContent('contact')"><span>Contact Us</span></a>
     <div class="extra-link">Extra</div>
   </div>
 
   <div id="content">
-    <h1>Contact Us</h1>
-    <p>Welcome to our website! We are a dedicated team of professionals passionate about providing top-notch services to our clients. With years of experience in the industry, we strive to deliver exceptional solutions that meet your needs.</p>
-    <p>Our mission is to ensure customer satisfaction by delivering high-quality work and maintaining open communication throughout the entire process. We value our clients and aim to build long-term relationships based on trust and mutual respect.</p>
-    <p>Feel free to explore our website to learn more about our services and how we can assist you. If you have any questions or inquiries, please don't hesitate to contact us. We look forward to serving you!</p>
+    <h1>Contact Me</h1>
+    <p>Thank you for visiting my website! As a passionate professional in the industry, 
+      I offer top-notch services and solutions to my clients.</p>
+    <p>I value feedback from visitors like you, as it helps me improve and deliver better services. Whether you have feedback on my work, user experience, or any suggestions for improvement, I am eager to hear from you. Your insights are valuable in shaping the future of my work.</p>
+    
+    <h2>Let's Collaborate</h2>
+    <p>I am open to collaboration opportunities! If you have a project or idea that you think aligns with my expertise, I would love to discuss it further. Whether it's a joint project, freelance work, or any other collaboration, feel free to share your proposals and let's create something amazing together.</p>
+
+    <p>If you want to provide feedback or explore potential collaborations, please use the contact form below. Your message is important to me, and I will respond as soon as possible.</p>
+
+    <!-- Bootstrap Feedback and Collaboration Form -->
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="message">Feedback or Collaboration Proposal</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Type your message here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!-- Add Bootstrap JS scripts at the end of the body tag -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

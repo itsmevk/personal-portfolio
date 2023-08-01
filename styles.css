@@ -1,6 +1,10 @@
 html, body {
   height: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   margin: 0;
@@ -56,6 +60,7 @@ body {
   margin-left: 20%;
   padding: 20px;
   padding-right: 5%;
+  text-align: justify;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 #content.slide-out {
@@ -327,3 +332,73 @@ header {
   color: #808080; /* Change the color on hover */
 }
 
+/* Hide the default scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+/* Define the track style */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Define the thumb style */
+::-webkit-scrollbar-thumb {
+  background-color: none;
+  border-radius: 4px;
+  transition: background-color 1s;
+}
+
+/* Define the thumb hover style */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #34495E /* Adjust the color as desired */
+}
+
+.carousel-inner img {
+  max-height: 400px; /* Adjust the height as per your requirement */
+  object-fit: cover;
+  background-color: #000000;
+}
+.carousel-inner .slide1 .carousel-caption {
+  text-align: left;
+  left: 20%; /* Adjust the value as needed */
+}
+
+/* Center-align text for the second slide */
+.carousel-inner .slide2 .carousel-caption {
+  text-align: center;
+}
+
+/* Right-align text for the third slide */
+.carousel-inner .slide3 .carousel-caption {
+  text-align: right;
+  right: 20%; /* Adjust the value as needed */
+}
+.carousel-inner .carousel-caption h3 {
+  font-size: 40px; /* Adjust the font size as needed */
+  font-weight: bold;
+}
+.carousel-inner .carousel-caption p {
+  font-size: 14px; /* Adjust the font size as needed */
+}
+.carousel-header {
+  position: absolute; /* Add padding to provide some space around the header */
+  z-index: 1;
+  top: 10px;
+  background-color: #2E4053 ;
+  /* Set the background color to black */
+  display: flex; /* Use flexbox to center the content */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* Style for the header text (h2 element) */
+.carousel-header h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  padding-right: 10px;
+  padding-left: 10px ; 
+  margin-top: 5px;
+}

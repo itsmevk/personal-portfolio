@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Projects - My Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Public+Sans&display=swap">
+ 
+
+</head>
+<body>
+  <div id="navbar">
+    <div class="icon">&#9776;</div>
+    <a href="#" onclick="changeContent('home')"><span>Home</span></a>
+    <a href="#" onclick="changeContent('about')"><span>About</span></a>
+    <a href="#" onclick="changeContent('projects')"><span>Projects</span></a>
+    <a href="#" onclick="changeContent('contact')"><span>Send Message</span></a>
+    <div class="extra-link">Extra</div>
+  </div>
+
+  <div id="content">
+  <!-- <h1>Projects</h1> -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-header">
+      <h2>Showcasing My Projects</h2>
+    </div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active slide1">
+        <!-- <div class="carousel-header">
+          <h2>Showcasing My Projects</h2>
+        </div> -->
+        <img src="serverless.jpg" alt="Los Angeles" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Hosting A Serverless Web Application on AWS</h3>
+          <p>Integrating AWS Services such as API Gateway, CloudFront, DynamoDB, S3 & Lambda to deliver a serverless website to the users.</p>
+        </div>
+      </div>
+
+      <div class="item slide2">
+        <img src="clouformation.jpg" alt="Chicago" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Modeling & Provisioning using CloudFormation Stacks.</h3>
+          <p>Provisioning & Managing multiple AWS services together such as S3, RDS, EC2, VPCs, Route53 Hosted Zones etc.</p>
+        </div>
+      </div>
+    
+      <div class="item slide3">
+        <img src="final.jpg" alt="New York" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Deploying A Secure & Redundant Flask Application.</h3>
+          <p>Uses EC2, Autoscaling, ELB, VPC, DynamoDB, S3, RDS, IAM, SNS <br> to deploy a Employee Database Application built on Flask.</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
