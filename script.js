@@ -66,6 +66,80 @@ function changeContent(page) {
   }, 300); // Adjust the delay duration (in milliseconds) to match the transition duration
 }
 
+let activeIndex = 0; // Initialize with the first project
+
+function showProject(projectClass) {
+  const projects = document.querySelectorAll('.project');
+  const indicators = document.querySelectorAll('.section-indicator');
+
+  // Find the index of the selected project
+  const newIndex = Array.from(indicators).findIndex(indicator => indicator.dataset.project === projectClass);
+
+  if (newIndex !== -1) {
+    // Hide the previously active project
+    projects[activeIndex].style.display = 'none';
+
+    // Remove 'active' class from previously active indicator
+    indicators[activeIndex].classList.remove('active');
+
+    // Show the selected project and set the active class for the corresponding indicator
+    projects[newIndex].style.display = 'block';
+    indicators[newIndex].classList.add('active');
+
+    // Update the activeIndex
+    activeIndex = newIndex;
+  }
+}
+
+function copyCode() {
+  const codeArea = document.getElementById('codeArea');
+  const codeText = codeArea.textContent;
+
+  navigator.clipboard.writeText(codeText).then(function() {
+    console.log('Code copied to clipboard');
+    showCopyFeedback();
+  }).catch(function(err) {
+    console.error('Unable to copy code:', err);
+  });
+}
+
+function showCopyFeedback() {
+  const copyFeedback = document.getElementById('copyFeedback');
+  copyFeedback.style.display = 'inline-block';
+  setTimeout(function() {
+    copyFeedback.style.display = 'none';
+  }, 1500); // Hide after 1.5 seconds
+}
+
+function showProject(projectId) {
+  const projectDivs = document.querySelectorAll('.project');
+  projectDivs.forEach((div) => {
+    div.style.display = 'none';
+  });
+
+  const selectedProject = document.getElementById(projectId);
+  if (selectedProject) {
+    selectedProject.style.display = 'block';
+
+    if (projectId === 'project1') {
+      const highlightFrame = document.getElementById('highlight-frame');
+      if (highlightFrame) {
+        highlightFrame.src = 'highlight.html';
+
+        // Adjust the height of the iframe once the content is loaded
+        highlightFrame.onload = function () {
+          highlightFrame.style.height = highlightFrame.contentWindow.document.body.scrollHeight + 'px';
+        };
+      }
+    }
+  }
+}
+
+// Initially hide all project divs except project1
+const initialProject = 'project1';
+showProject(initialProject);
+
+
 // Set home page as default
 changeContent('home');
 highlightNavItem('home');
